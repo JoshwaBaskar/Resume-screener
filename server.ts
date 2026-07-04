@@ -20,8 +20,8 @@ const PORT = Number(process.env.PORT) || 3000;
 
 async function startServer() {
   const app = express();
-  app.use(express.json({ limit: "50mb" }));
-  app.use(express.urlencoded({ limit: "50mb", extended: true }));
+  app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
   // Middleware to authenticate JWT tokens
   const authenticateToken = (req: any, res: Response, next: NextFunction) => {
