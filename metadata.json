@@ -1,0 +1,6 @@
+{
+  "name": "AI Resume Screener & Matcher",
+  "description": "An enterprise-grade platform for recruiters and candidates to screen resumes, compare candidates against jobs using Gemini, generate custom interview questions, and analyze trends.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
