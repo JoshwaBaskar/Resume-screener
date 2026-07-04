@@ -16,7 +16,7 @@ import {
 } from "./server/ai";
 
 const JWT_SECRET = process.env.JWT_SECRET || "ai-resume-screener-enterprise-secret-key-2026";
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 async function startServer() {
   const app = express();
@@ -695,11 +695,11 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://0.0.0.0:${PORT}`);
-  });
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
 }
 
 startServer().catch((e) => {
-  console.error("Failed to start server on port 3000:", e);
+  console.error("Failed to start server:", e);
 });
