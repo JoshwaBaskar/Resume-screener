@@ -42,7 +42,7 @@ export async function analyzeResume(resumeText: string, fileName?: string, candi
   try {
     const ai = getAI();
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         systemInstruction: "You are an experienced HR Recruiter. Analyze resumes professionally. Never hallucinate information. Only use available information. Always return structured JSON.",
